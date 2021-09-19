@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group = 'de.dafis.boilerplates'
+version = '0.1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.xerial:sqlite-jdbc:3.16.1'
+  implementation 'com.dlsc.workbenchfx:workbenchfx-core:11.1.0'
+  
+  testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
